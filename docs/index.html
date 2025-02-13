@@ -1,1 +1,208 @@
-<h1>Hola</h1>
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORECAST: FOrward REsearch on Clinical And Survival Trends</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-xl shadow-md max-w-md text-center">
+      <!-- Espacio para el logo -->
+      <div class="mb-6">
+        <img src="res/logo.svg" alt="FORECAST logo" class="w-24 h-24 mx-auto" />
+      </div>
+      <!-- Título y subtítulo -->
+      <h1 class="text-3xl font-bold text-gray-800 mb-2">FORECAST</h1>
+      <h3 class="text-gray-800 mb-8">
+        FOrward REsearch on Clinical And Survival Trends
+      </h3>
+      <!-- Texto introductorio -->
+      <p class="text-gray-600 mb-8">
+        For analysts building decision-analytic models, FORECAST streamlines the process of fitting, validating, and visualizing parametric time-to-event models derived from published Kaplan–Meier survival curves. Use our app to accurately estimate event hazards and monitor their evolution over time.
+      </p>
+      <!-- Botones de descarga -->
+      <div class="flex flex-col md:flex-row gap-4 justify-center mb-8">
+        <!-- Botón para Windows -->
+        <a
+          href="https://github.com/fwdcast/fwdcast.github.io/releases/download/release/FORECAST_v0.1.rar"
+          class="download-windows flex items-center justify-center bg-slate-700 text-white px-4 py-2 rounded-full hover:bg-slate-800 transition-colors duration-300"
+        >
+          <img src="res/windows-logo.svg" alt="Windows Logo" class="w-6 h-6 mr-2" />
+          Download for Windows
+        </a>
+        <!-- Botón para otros sistemas -->
+        <a
+          href="https://github.com/fwdcast/fwdcast.github.io/releases/download/release/FORECAST_v0.1.rar"
+          class="download-mac flex items-center justify-center bg-slate-600 text-white px-4 py-2 rounded-full hover:bg-slate-700 transition-colors duration-300"
+        >
+          <img src="res/apple-logo.svg" alt="Other Systems Logo" class="w-6 h-6 mr-2" />
+          Download for Other Systems
+        </a>
+      </div>
+      <!-- Enlace a la publicación -->
+      <div class="mb-4">
+        <a href="URL_PUBLICATION" class="text-blue-500 hover:underline">
+          Read our Publication
+        </a>
+      </div>
+      <!-- Aviso para citar la publicación -->
+      <p class="text-gray-500 text-sm mb-4">
+        If you use FORECAST, please cite our publication.
+      </p>
+      <div class="mb-4">
+        <a href="changelog.html" class="text-blue-500 hover:underline">
+          Changelog
+        </a>
+      </div>
+    </div>
+
+    <!-- Modal para las instrucciones de instalación en Windows -->
+    <div
+      id="windows-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden"
+    >
+      <div class="bg-white p-6 rounded-lg max-w-md w-full relative">
+        <button
+          id="close-windows-modal"
+          class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl"
+        >
+          &times;
+        </button>
+        <h2 class="text-xl font-bold mb-4">Installation Instructions (Windows)</h2>
+        <ol class="list-decimal ml-5 space-y-4 text-left">
+          <li>
+            <p>Unzip the files to your local disk.</p>
+            <img
+              src="res/scs1.png"
+              alt="Unzip files"
+              class="w-full border mt-2"
+            />
+          </li>
+          <li>
+            <p>
+              Run the <code>run.bat</code> file (no need to have R installed).
+            </p>
+            <img
+              src="res/scs2.png"
+              alt="Run run.bat"
+              class="w-full border mt-2"
+            />
+          </li>
+          <li>
+            <p>Wait for the program to load in your default browser.</p>
+            <img
+              src="res/scs3.png"
+              alt="Program loading"
+              class="w-full border mt-2"
+            />
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Modal para las instrucciones de instalación en otros sistemas -->
+    <div
+      id="others-modal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden"
+    >
+      <div class="bg-white p-6 rounded-lg max-w-md w-full relative">
+        <button
+          id="close-others-modal"
+          class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl"
+        >
+          &times;
+        </button>
+        <h2 class="text-xl font-bold mb-4">Installation Instructions (Other Systems)</h2>
+        <ol class="list-decimal ml-5 space-y-4 text-left">
+          <li>
+            <p>
+              Make sure you have <strong>R</strong> and <strong>RStudio</strong> installed.
+            </p>
+            <div class="flex gap-2 mt-2">
+              <a href="https://cran.r-project.org" target="_blank" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 transition-colors duration-300">Download R</a>
+              <a href="https://www.rstudio.com/products/rstudio/download/" target="_blank" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition-colors duration-300">Download RStudio</a>
+            </div>
+          </li>
+          <li>
+            <p>Unzip the downloaded file to your local disk.</p>
+          </li>
+          <li>
+            <p>
+              Go to <code>ProgramFiles</code>, open <code>app.r</code> in RStudio, and click on <strong>RunApp</strong> in the top right corner of the RStudio window.
+            </p>
+            <img
+              src="res/scs4.png"
+              alt="Run app.r in RStudio"
+              class="w-full border mt-2"
+            />
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Script para controlar la descarga y los modales -->
+    <script>
+      // Modal para Windows
+      const windowsModal = document.getElementById("windows-modal");
+      const downloadWindowsBtn = document.querySelector(".download-windows");
+      const closeWindowsBtn = document.getElementById("close-windows-modal");
+
+      downloadWindowsBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        // Inicia la descarga para Windows
+        const downloadLink = document.createElement("a");
+        downloadLink.href = downloadWindowsBtn.getAttribute("href");
+        downloadLink.download = "";
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+
+        // Muestra el modal de instrucciones para Windows
+        windowsModal.classList.remove("hidden");
+      });
+
+      closeWindowsBtn.addEventListener("click", function () {
+        windowsModal.classList.add("hidden");
+      });
+
+      windowsModal.addEventListener("click", function (event) {
+        if (event.target === windowsModal) {
+          windowsModal.classList.add("hidden");
+        }
+      });
+
+      // Modal para Otros Sistemas
+      const othersModal = document.getElementById("others-modal");
+      const downloadOthersBtn = document.querySelector(".download-mac");
+      const closeOthersBtn = document.getElementById("close-others-modal");
+
+      downloadOthersBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        // Inicia la descarga para Otros Sistemas
+        const downloadLinkOthers = document.createElement("a");
+        downloadLinkOthers.href = downloadOthersBtn.getAttribute("href");
+        downloadLinkOthers.download = "";
+        document.body.appendChild(downloadLinkOthers);
+        downloadLinkOthers.click();
+        document.body.removeChild(downloadLinkOthers);
+
+        // Muestra el modal de instrucciones para Otros Sistemas
+        othersModal.classList.remove("hidden");
+      });
+
+      closeOthersBtn.addEventListener("click", function () {
+        othersModal.classList.add("hidden");
+      });
+
+      othersModal.addEventListener("click", function (event) {
+        if (event.target === othersModal) {
+          othersModal.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
