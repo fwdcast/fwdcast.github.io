@@ -4,15 +4,21 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://fwdcast.github.io',
 	integrations: [
 		starlight({
 			title: 'Proyecto FORECAST',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			customCss: ['./src/styles/custom.css'],
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/fwdcast/fwdcast.github.io' }],
 			sidebar: [
 				{
-					label: 'Hitos',
+					label: 'Proyecto',
 					items: [
 						// Each item here is one entry in the navigation menu.
+						{ label: 'Inicio', slug: '' },
+						{ label: 'Actualizaciones', slug: 'actualizaciones' },
+						{ label: 'Transparencia', slug: 'transparencia' },
+						{ label: 'Contacto y feedback', slug: 'contacto' },
 						{ label: 'Hitos y WP', slug: 'hitos/hitos' },
 						{ label: 'Hito 1 - Conceptualización', slug: 'hitos/conceptualizacion' },
 						{ label: 'Hito 2 - Consultas', slug: 'hitos/consultas' },

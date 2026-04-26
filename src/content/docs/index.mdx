@@ -1,15 +1,22 @@
 ---
 title: Proyecto FORECAST
-description: Generación de herramientas para la modelización y extrapolación de datos para la evaluación económica de tecnologías sanitaria
+description: Generación de herramientas para la modelización y extrapolación de datos para la evaluación económica de tecnologías sanitarias
 template: splash
 hero:
-  tagline: Generación de herramientas para la modelización y extrapolación de datos para la evaluación económica de tecnologías sanitaria
+  tagline: Herramientas abiertas para modelizar y extrapolar datos de supervivencia en evaluación económica de tecnologías sanitarias.
   image:
     file: ../../assets/robotin3.png
   actions:
     - text: Hitos del proyecto
       link: /hitos/hitos/
       icon: right-arrow
+    - text: Transparencia
+      link: /transparencia/
+      icon: document
+    - text: Contacto
+      link: /contacto/
+      icon: email
+      variant: minimal
     - text: Ver la memoria del proyecto
       link: /Memoria_FORECAST_VFinal.pdf
       icon: external
@@ -18,22 +25,48 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
+## Qué es FORECAST
+
+FORECAST es un proyecto de investigación orientado a desarrollar una herramienta abierta y gratuita para ajustar curvas paramétricas a datos de supervivencia y extrapolar horizontes temporales en evaluaciones farmacoeconómicas.
+
+El proyecto responde a una necesidad práctica: muchos modelos de coste-efectividad necesitan resultados a largo plazo, mientras que los ensayos clínicos suelen tener seguimiento limitado. FORECAST busca hacer este proceso más accesible, trazable y reproducible.
+
+## Estado del proyecto
+
+El trabajo se organiza en cinco paquetes: conceptualización, consultas, desarrollo del núcleo estadístico, desarrollo de la interfaz y difusión científica. Esta web irá incorporando los materiales públicos conforme estén consolidados.
+
+<div class="forecast-update">
+	<p><strong>Última actualización pública:</strong> tras la reunión telemática de abril, el equipo está trabajando en un segundo boceto de la aplicación antes de compartirlo con la comunidad.</p>
+	<p><a href="/actualizaciones/">Ver actualizaciones</a> · <a href="/hitos/conceptualizacion/">Resumen WP1</a> · <a href="/FORECAST_boceto_V01.pdf">Boceto V01</a></p>
+</div>
+
 ## Hitos del proyecto
 
 <CardGrid stagger>
 	<Card title="Conceptualización" icon="pencil">
-		Desarrollo de un boceto de la aplicación y sus funcionalidades
+		Boceto inicial de la aplicación, alcance funcional y flujo de trabajo.
 	</Card>
 	<Card title="Consultas" icon="document">
-		Presentación del boceto a actores potencialmente interesados
+		Presentación del boceto a actores potencialmente interesados y recogida de comentarios.
 	</Card>
 	<Card title="Desarrollo (1)" icon="add-document">
-		Desarrollo del back-end de la aplicación.
+		Desarrollo del núcleo estadístico y del backend de la aplicación.
 	</Card>
 	<Card title="Desarrollo (2)" icon="setting">
-		Desarrollo del frontend de la aplicación.
+		Desarrollo de la interfaz visual y empaquetado para usuarios.
 	</Card>
 	<Card title="Difusión" icon="open-book">
-		Escritura del artículo y de la comunicación.
+		Publicación científica, comunicación a congreso y documentación abierta.
 	</Card>
 </CardGrid>
+
+## Resultados esperados
+
+- Una aplicación funcional para cargar datos individuales o agregados de supervivencia.
+- Ajustes paramétricos y flexibles con indicadores de ajuste como AIC y BIC.
+- Exportación de resultados para apoyar modelos de evaluación económica.
+- Un informe que documente las decisiones de modelización y mejore la trazabilidad.
+
+## Financiación
+
+La financiación proviene del Programa de Ayudas a la Investigación Javier Imbroda, de UTAMED.
