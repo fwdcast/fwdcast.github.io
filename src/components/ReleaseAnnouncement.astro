@@ -1,0 +1,60 @@
+<section class="forecast-release" aria-labelledby="forecast-release-title">
+	<p class="forecast-release__badge">Nueva versión · v0.0.3</p>
+	<h2 id="forecast-release-title">FORECAST ya está disponible para Windows y Linux</h2>
+	<p>Descarga la aplicación y empieza a explorar las herramientas de modelización y extrapolación de datos de supervivencia del proyecto.</p>
+	<div class="forecast-release__downloads">
+		<a class="forecast-release__button" href="https://github.com/fwdcast/app/releases/download/v0.0.3/FORECAST-0.0.3-windows-x86_64.zip">
+			<svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M2 4.5 10.5 3.3v8H2Zm10-1.4L22 1.7v9.6H12ZM2 12.8h8.5v8L2 19.6Zm10 0h10v9.5l-10-1.4Z" /></svg>
+			<span>Descargar para Windows<small>64 bits · ZIP</small></span>
+		</a>
+		<a class="forecast-release__button" href="https://github.com/fwdcast/app/releases/download/v0.0.3/FORECAST-0.0.3-linux-x86_64.tar.xz">
+			<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 9V6a4 4 0 0 1 8 0v3c0 2 3 4 3 7a7 7 0 0 1-14 0c0-3 3-5 3-7Z" /><path d="m10 9 2 2 2-2M8 17l-4 4h5l1-3m6-1 4 4h-5l-1-3" /><circle cx="10.5" cy="6.5" r=".5" fill="currentColor" /><circle cx="13.5" cy="6.5" r=".5" fill="currentColor" /></svg>
+			<span>Descargar para Linux<small>64 bits · TAR.XZ</small></span>
+		</a>
+	</div>
+	<a class="forecast-release__details" href="https://github.com/fwdcast/app/releases/tag/v0.0.3">Ver detalles de la versión en GitHub <span aria-hidden="true">↗</span></a>
+</section>
+
+<style>
+	.forecast-release {
+		margin-block: 0 2.5rem;
+		padding: clamp(1.25rem, 4vw, 2.25rem);
+		border: 1px solid var(--sl-color-accent);
+		border-radius: 1rem;
+		background: linear-gradient(125deg, var(--sl-color-accent-low), var(--sl-color-bg));
+	}
+	.forecast-release__badge {
+		display: inline-block;
+		margin: 0;
+		padding: 0.3rem 0.75rem;
+		border-radius: 999px;
+		background: var(--sl-color-bg);
+		color: var(--sl-color-text-accent);
+		font-size: 0.85rem;
+		font-weight: 600;
+	}
+	.forecast-release h2 { margin-block: 1rem 0.75rem; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.25; }
+	.forecast-release p:not(.forecast-release__badge) { margin: 0; max-width: 65ch; }
+	.forecast-release__downloads { display: flex; flex-wrap: wrap; gap: 1rem; margin-block: 1.5rem; }
+	.forecast-release__button {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin: 0;
+		padding: 0.85rem 1.25rem;
+		border: 1px solid var(--sl-color-text-accent);
+		border-radius: 0.65rem;
+		background: var(--sl-color-text-accent);
+		color: var(--sl-color-bg);
+		text-decoration: none;
+		font-weight: 600;
+		line-height: 1.4;
+	}
+	.forecast-release__button:hover { background: var(--sl-color-bg); color: var(--sl-color-text-accent); }
+	.forecast-release__button:focus-visible, .forecast-release__details:focus-visible { outline: 3px solid var(--sl-color-text-accent); outline-offset: 4px; }
+	.forecast-release__button svg { flex-shrink: 0; }
+	.forecast-release__button span, .forecast-release__button small { display: block; margin: 0; }
+	.forecast-release__button small { font-size: 0.8rem; font-weight: 400; }
+	.forecast-release__details { font-size: 0.9rem; }
+	@media (max-width: 35rem) { .forecast-release__button { width: 100%; } }
+</style>
